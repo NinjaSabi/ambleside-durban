@@ -63,7 +63,7 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Ambleside Durban North — Home">
-      <div class="nav-logo-name">Ambleside Durban North<span class="nav-logo-sub">Junior School &amp; Preschool</span></div>
+      <img src="/images/ambleside-logo-stacked.png" alt="Ambleside Durban North" class="nav-logo-img" width="120" height="66">
     </a>
     <div class="nav-right">
       <ul class="nav-links">
@@ -133,7 +133,11 @@
 
 <!-- ══ HERO ══ -->
 <section class="hero">
-  <div class="container">
+  <!-- Aloe watermark -->
+  <div style="position:absolute;bottom:-20px;right:5%;opacity:0.06;pointer-events:none;z-index:0;">
+    <img src="/images/ambleside-aloe.png" alt="" aria-hidden="true" style="width:280px;height:280px;">
+  </div>
+  <div class="container" style="position:relative;z-index:1;">
     <div class="hero-eyebrow">Durban North · Charlotte Mason · Est. 2018</div>
     <h1>Learning<br>to <em>Live.</em></h1>
     <p class="hero-sub">A Charlotte Mason education for curious minds and growing hearts — where every child is known, nurtured, and challenged to become their very best self.</p>
@@ -199,78 +203,112 @@
 </section>
 
 <!-- ══ TWO SCHOOLS ══ -->
-<div style="display:grid;grid-template-columns:1fr;">
-  <div id="junior-school" style="background:var(--navy);padding:4rem 1.5rem;">
-    <div style="max-width:560px;margin:0 auto;">
-      <div class="label">Primary Education</div>
-      <h2 class="title-light">Ambleside<br>Junior School</h2>
-      <p class="text-white mt-sm">From Grade 1 to Grade 7, our junior school offers a rigorous, rich, and deeply human education — preparing children not just for high school, but for a full and meaningful life.</p>
-      <ul style="margin-top:1.8rem;display:flex;flex-direction:column;gap:0.7rem;">
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:0.45rem;flex-shrink:0;"></span>Singapore Math — deep conceptual understanding</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:0.45rem;flex-shrink:0;"></span>Living books, narration &amp; rich literature</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:0.45rem;flex-shrink:0;"></span>Nature study, composer &amp; picture study</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:0.45rem;flex-shrink:0;"></span>Athletics, swimming, cross-country &amp; chess</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:rgba(255,255,255,0.7);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:0.45rem;flex-shrink:0;"></span>Annual Market Day entrepreneurship initiative</li>
-      </ul>
-      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="/junior-school/" class="btn btn-gold">Junior School</a>
-        <a href="/junior-school/curriculum/" class="btn btn-outline-white">Curriculum</a>
-      </div>
+<!-- Preschool LEFT (journey starts here), Junior School RIGHT -->
+<div class="two-schools-grid">
+  <div id="preschool" class="school-panel school-panel--preschool">
+    <div class="school-panel-aloe">
+      <img src="/images/ambleside-aloe.png" alt="" aria-hidden="true" width="80" height="80">
+    </div>
+    <div class="label label-brown">Early Childhood Education · Gr 000 — R</div>
+    <h2>Ambleside Preschool<br><em>— Acorns</em></h2>
+    <p class="mt-sm">The pre-grade years are not a waiting room for real school. They are among the most formative years of a child's entire life. At Acorns, we take these years seriously — laying foundations that last a lifetime.</p>
+    <ul class="school-list">
+      <li><span class="school-dot school-dot--brown"></span>Free &amp; structured play every single day</li>
+      <li><span class="school-dot school-dot--brown"></span>Living books, stories &amp; rich read-alouds</li>
+      <li><span class="school-dot school-dot--brown"></span>Early maths, Afrikaans &amp; isiZulu</li>
+      <li><span class="school-dot school-dot--brown"></span>Music literacy, art &amp; handwork</li>
+      <li><span class="school-dot school-dot--brown"></span>Swimming included in programme</li>
+      <li><span class="school-dot school-dot--brown"></span>Bible, nature time &amp; motor skills</li>
+    </ul>
+    <div class="school-ctas">
+      <a href="/preschool/" class="btn btn-primary">Preschool — Acorns</a>
+      <a href="/preschool/what-we-offer/" class="btn btn-outline">What We Offer</a>
     </div>
   </div>
-  <div id="preschool" style="background:var(--cream);padding:4rem 1.5rem;border-top:1px solid var(--border);">
-    <div style="max-width:560px;margin:0 auto;">
-      <div class="label label-brown">Early Childhood Education</div>
-      <h2>Ambleside Preschool<br><em>— Acorns</em></h2>
-      <p class="mt-sm">The pre-grade years are not a waiting room for real school. They are among the most formative years of a child's entire life. At Acorns, we take these years seriously — laying foundations that last a lifetime.</p>
-      <ul style="margin-top:1.8rem;display:flex;flex-direction:column;gap:0.7rem;">
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brown);margin-top:0.45rem;flex-shrink:0;"></span>Free &amp; structured play every single day</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brown);margin-top:0.45rem;flex-shrink:0;"></span>Living books, stories &amp; rich read-alouds</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brown);margin-top:0.45rem;flex-shrink:0;"></span>Early maths, Afrikaans &amp; isiZulu</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brown);margin-top:0.45rem;flex-shrink:0;"></span>Swimming included in programme</li>
-        <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--muted);font-size:0.88rem;"><span style="width:6px;height:6px;border-radius:50%;background:var(--brown);margin-top:0.45rem;flex-shrink:0;"></span>Bible, nature time &amp; motor skills development</li>
-      </ul>
-      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="/preschool/" class="btn btn-primary">Preschool — Acorns</a>
-        <a href="/preschool/what-we-offer/" class="btn btn-outline">What We Offer</a>
-      </div>
+
+  <div id="junior-school" class="school-panel school-panel--junior">
+    <div class="label">Primary Education · Gr 1 — 7</div>
+    <h2 class="title-light">Ambleside<br>Junior School</h2>
+    <p class="text-white mt-sm">From Grade 1 to Grade 7, our junior school offers a rigorous, rich, and deeply human education — preparing children not just for high school, but for a full and meaningful life.</p>
+    <ul class="school-list">
+      <li><span class="school-dot school-dot--gold"></span>Singapore Math — deep conceptual understanding</li>
+      <li><span class="school-dot school-dot--gold"></span>Living books, narration &amp; rich literature</li>
+      <li><span class="school-dot school-dot--gold"></span>Nature study, composer &amp; picture study</li>
+      <li><span class="school-dot school-dot--gold"></span>Afrikaans, history, science &amp; handwork</li>
+      <li><span class="school-dot school-dot--gold"></span>Athletics, swimming, cross-country &amp; chess</li>
+      <li><span class="school-dot school-dot--gold"></span>Annual Market Day entrepreneurship</li>
+    </ul>
+    <div class="school-ctas">
+      <a href="/junior-school/" class="btn btn-gold">Junior School</a>
+      <a href="/junior-school/curriculum/" class="btn btn-outline-white">Curriculum</a>
     </div>
   </div>
 </div>
-<!-- Side by side on desktop -->
+
 <style>
-  @media (min-width: 768px) {
-    #junior-school, #preschool {
-      padding: 6rem 4rem !important;
-    }
-    #junior-school { border-top: none !important; }
-    #junior-school + div,
-    #preschool { border-top: none !important; border-left: 1px solid rgba(255,255,255,0.08) !important; }
+.two-schools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .two-schools-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 768px) {
-    #junior-school { grid-column: 1; }
-    #preschool { grid-column: 2; }
+}
+.school-panel {
+  padding: 4rem 1.5rem;
+  position: relative;
+}
+@media (min-width: 768px) { .school-panel { padding: 6rem 4rem; } }
+@media (min-width: 1024px) { .school-panel { padding: 7rem 5rem; } }
+
+.school-panel--preschool {
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+@media (min-width: 768px) {
+  .school-panel--preschool {
+    border-bottom: none;
+    border-right: 1px solid var(--border);
   }
+}
+.school-panel--junior {
+  background: var(--navy);
+}
+.school-panel-aloe {
+  position: absolute;
+  top: 2rem; right: 1.5rem;
+  opacity: 0.12;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .school-panel-aloe { top: 3rem; right: 3rem; }
+}
+.school-panel-aloe img { width: 80px; height: 80px; }
+
+.school-list {
+  margin-top: 1.8rem;
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.school-list li {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  font-size: 0.88rem; line-height: 1.5;
+}
+.school-panel--preschool .school-list li { color: var(--muted); }
+.school-panel--junior .school-list li { color: rgba(255,255,255,0.72); }
+
+.school-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  margin-top: 0.45rem; flex-shrink: 0;
+}
+.school-dot--brown { background: var(--brown); }
+.school-dot--gold  { background: var(--gold); }
+
+.school-ctas {
+  margin-top: 2rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
 </style>
-<script>
-  function makeSchoolGrid() {
-    const jr = document.getElementById('junior-school');
-    const ps = document.getElementById('preschool');
-    if (!jr || !ps) return;
-    const wrapper = jr.parentElement;
-    if (window.innerWidth >= 768) {
-      wrapper.style.gridTemplateColumns = '1fr 1fr';
-      ps.style.borderTop = 'none';
-      ps.style.borderLeft = '1px solid rgba(255,255,255,0.06)';
-    } else {
-      wrapper.style.gridTemplateColumns = '1fr';
-      ps.style.borderTop = '1px solid var(--border)';
-      ps.style.borderLeft = 'none';
-    }
-  }
-  makeSchoolGrid();
-  window.addEventListener('resize', makeSchoolGrid);
-</script>
 
 <!-- ══ VALUES ══ -->
 <section class="section section-bg-warm-white">
@@ -393,7 +431,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand-name">Ambleside Durban North<span class="footer-brand-sub">Junior School &amp; Preschool</span></div>
+        <a href="/" style="display:inline-block;margin-bottom:1rem;">
+          <img src="/images/ambleside-logo-stacked.png" alt="Ambleside Durban North" style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.85;">
+        </a>
         <p class="footer-tagline">A Charlotte Mason education for curious minds and growing hearts — serving families in Durban North, KwaZulu-Natal.</p>
         <div class="footer-social">
           <a href="https://instagram.com/amblesidedurban" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">IG</a>
