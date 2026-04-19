@@ -557,9 +557,54 @@ strong { font-weight: 600; color: var(--text); }
 
 /* ── BATCH 2 FIXES ── */
 
-/* Hide Apply Now nav CTA on small mobile — overlaps logo */
-@media (max-width: 767px) {
-  .nav-cta { display: none; }
+/* Hide Apply Now nav CTA on mobile — overlaps logo */
+@media (max-width: 899px) {
+  .nav-cta { display: none !important; }
+}
+
+/* ── HORIZONTAL SCROLL CARDS (mobile browse sections) ── */
+.cards-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1.2rem;
+  padding-bottom: 1.2rem;
+  /* hide scrollbar but keep functional */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.cards-scroll::-webkit-scrollbar { display: none; }
+.cards-scroll > * {
+  scroll-snap-align: start;
+  min-width: min(280px, 78vw);
+  flex-shrink: 0;
+}
+
+/* Scroll hint dots */
+.scroll-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 1rem;
+}
+.scroll-dots span {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.scroll-dots span.active { background: var(--navy); }
+
+/* On tablet+ revert to grid */
+@media (min-width: 640px) {
+  .cards-scroll {
+    display: grid !important;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+  .scroll-dots { display: none; }
 }
 
 /* Contact h1 — single line on mobile */

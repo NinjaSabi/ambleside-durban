@@ -55,4 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* ── HORIZONTAL SCROLL DOTS ── */
+  document.querySelectorAll('.cards-scroll').forEach(function(container) {
+    var dots = container.nextElementSibling;
+    if (!dots || !dots.classList.contains('scroll-dots')) return;
+    var items = container.children;
+    var count = items.length;
+
+    // Build dots
+    dots.innerHTML = '';
+    for (var i = 0; i < count; i++) {
+      var d = document.createElement('span');
+      if (i === 0) d.classList.add('active');
+      (function(idx) {
+        d.addEventListener('click', function() {
+          items[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        });
+      })(i);
+      dots.appendChild(d);
+    }
+
+    // Update active dot on scroll
+    container.addEventListener('scroll', function() {
+      var scrollLeft = container.scrollLeft;
+      var width = container.offsetWidth;
+      var active = Math.round(scrollLeft / (width * 0.78));
+      dots.querySelectorAll('span').forEach(function(d, i) {
+        d.classList.toggle('active', i === active);
+      });
+    }, { passive: true });
+  });
+
 });
