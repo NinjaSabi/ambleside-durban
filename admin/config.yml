@@ -7,7 +7,7 @@ public_folder: "/images/uploads"
 
 site_url: https://amblesidedurban.com
 display_url: https://amblesidedurban.com
-logo_url: /images/ambleside-logo.svg
+logo_url: /images/logo-nav.jpg
 
 collections:
   # NEWS POSTS
@@ -27,22 +27,8 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "SEO Meta Description", name: "meta_description", widget: "string", hint: "150-160 characters for Google", required: false }
 
-  # EVENTS
-  - name: "events"
-    label: "Events"
-    label_singular: "Event"
-    folder: "_content/events"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Event Name", name: "title", widget: "string" }
-      - { label: "Event Date", name: "event_date", widget: "datetime" }
-      - { label: "End Date (optional)", name: "event_end_date", widget: "datetime", required: false }
-      - { label: "Location", name: "location", widget: "string", default: "Ambleside School, 27 Chelsea Drive, Durban North", required: false }
-      - { label: "Category", name: "category", widget: "select", options: ["School Event", "Sport", "Academic", "Cultural", "Preschool", "Junior School", "Parents", "Community"] }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
-      - { label: "Description", name: "body", widget: "markdown" }
-      - { label: "Open to Public?", name: "public", widget: "boolean", default: true }
+  # EVENTS — managed via Google Calendar (see events/index.html)
+  # No CMS collection needed here
 
   # TEAM MEMBERS
   - name: "team"

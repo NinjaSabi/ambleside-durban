@@ -3,13 +3,26 @@
   to = "/admin/index.html"
   status = 200
 
+# Netlify Identity — redirect password recovery and invites to admin
+[[redirects]]
+  from = "/#recovery_token=*"
+  to = "/admin/#recovery_token=:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/#invite_token=*"
+  to = "/admin/#invite_token=:splat"
+  status = 301
+  force = true
+
 [build]
   publish = "."
 
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"

@@ -6,24 +6,23 @@
   <title>Events & Calendar — Ambleside Durban North</title>
   <meta name="description" content="Upcoming events at Ambleside Durban North — school events, sport fixtures, open days, and community gatherings for current families and prospective visitors.">
   <link rel="canonical" href="https://amblesidedurban.com/events/">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://amblesidedurban.com/events/">
   <meta property="og:title" content="Events & Calendar — Ambleside Durban North">
   <meta property="og:description" content="Upcoming events at Ambleside Durban North — school events, sport fixtures, open days, and community gatherings for current families and prospective visitors.">
   <meta property="og:image" content="https://amblesidedurban.com/images/og-home.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <link rel="shortcut icon" href="/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/global.css">
-  
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type": "ListItem", "position": 1, "name": "Events", "item": "https://amblesidedurban.com/events/"}]}
-</script>
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Events","item":"https://amblesidedurban.com/events/"}]}
+  </script>
 </head>
 <body>
-<!-- ══ NAV ══ -->
+
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Ambleside Durban North — Home">
@@ -57,6 +56,7 @@
           <ul class="dropdown">
             <li><a href="/admissions/how-to-apply/">How to Apply</a></li>
             <li><a href="/admissions/fees/">Fees 2026</a></li>
+            <li><a href="/thursday-enrichment/">Thursday Enrichment</a></li>
           </ul>
         </li>
         <li><a href="/news/">News</a></li>
@@ -76,7 +76,7 @@
   <a href="/about/our-values/" class="mobile-sub">Our Values</a>
   <a href="/about/charlotte-mason/" class="mobile-sub">Our Philosophy</a>
   <a href="/about/our-team/" class="mobile-sub">Our Team</a>
-  <a href="/preschool/">Preschool — Acorns</a>
+  <a href="/preschool/">Preschool (Acorns)</a>
   <a href="/preschool/what-we-offer/" class="mobile-sub">What We Offer</a>
   <a href="/primary-school/">Primary School</a>
   <a href="/primary-school/curriculum/" class="mobile-sub">Curriculum</a>
@@ -84,12 +84,12 @@
   <a href="/admissions/">Admissions</a>
   <a href="/admissions/how-to-apply/" class="mobile-sub">How to Apply</a>
   <a href="/admissions/fees/" class="mobile-sub">Fees 2026</a>
+  <a href="/thursday-enrichment/" class="mobile-sub">Thursday Enrichment</a>
   <a href="/news/">News</a>
   <a href="/events/">Events</a>
   <a href="/contact/">Contact</a>
   <a href="/admissions/how-to-apply/" class="mobile-cta">Apply Now</a>
 </div>
-
 
 <div class="page-header">
   <div class="breadcrumb container"><a href="/">Home</a> <span>›</span> <span>Events</span></div>
@@ -102,46 +102,36 @@
 
 <section class="section section-bg-warm-white">
   <div class="container" style="max-width:860px;">
-    <div style="display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);">
 
-      <a href="/contact/" class="event-card fade-up">
-        <div class="event-date-block">
-          <div class="event-date-day">15</div>
-          <div class="event-date-month">Mar</div>
-        </div>
-        <div class="event-body">
-          <div class="event-cat">School Event</div>
-          <div class="event-title">Open Day 2026</div>
-          <div class="event-meta">09:00 – 12:00 · 27 Chelsea Drive, Durban North · Open to all prospective families</div>
-        </div>
-      </a>
-
-      <div class="event-card fade-up d1" style="opacity:.5;pointer-events:none;">
-        <div class="event-date-block" style="background:var(--muted);">
-          <div class="event-date-day">TBC</div>
-          <div class="event-date-month">2026</div>
-        </div>
-        <div class="event-body">
-          <div class="event-cat">Placeholder</div>
-          <div class="event-title">Events Will Be Listed Here</div>
-          <div class="event-meta">Once the school calendar is set up, all events will appear on this page — sport fixtures, cultural events, parent evenings, and more.</div>
-        </div>
-      </div>
-
+    <!-- Loading state -->
+    <div id="events-loading" style="text-align:center;padding:3rem 0;">
+      <div style="width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 1rem;"></div>
+      <p style="font-size:.88rem;color:var(--muted);">Loading upcoming events...</p>
     </div>
 
-    <!-- Google Calendar embed placeholder -->
-    <div style="margin-top:3rem;" class="fade-up">
-      <div class="label label-brown">School Calendar</div>
-      <div style="background:var(--cream);padding:2.5rem;border:1px dashed var(--gold);text-align:center;margin-top:1rem;">
-        <p style="font-size:.88rem;color:var(--muted);">Google Calendar will be embedded here once the school calendar is configured.</p>
-        <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem;">Contact us at <a href="mailto:admin@amblesidedurban.com" style="color:var(--navy);">admin@amblesidedurban.com</a> for a copy of the current term calendar.</p>
-      </div>
+    <!-- Events list — populated by JS -->
+    <div id="events-list" style="display:none;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);"></div>
+
+    <!-- Empty state -->
+    <div id="events-empty" style="display:none;padding:3rem 2rem;background:var(--cream);text-align:center;border:1px solid var(--border);">
+      <div style="font-family:var(--font-serif);font-size:1.1rem;color:var(--navy);margin-bottom:.6rem;">No upcoming events at this time.</div>
+      <p style="font-size:.88rem;color:var(--muted);">Check back soon — events are added regularly. You can also follow us on <a href="https://instagram.com/amblesidedurban" style="color:var(--navy);">Instagram</a> and <a href="https://facebook.com/amblesideschoolofdurban" style="color:var(--navy);">Facebook</a> for updates.</p>
     </div>
+
+    <!-- Error state -->
+    <div id="events-error" style="display:none;padding:2rem;background:var(--cream);border-left:3px solid var(--gold);margin-bottom:2rem;">
+      <p style="font-size:.88rem;color:var(--muted);">Unable to load events right now. Please <a href="mailto:admin@amblesidedurban.com" style="color:var(--navy);">contact us</a> for the current term calendar.</p>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:3rem;display:flex;gap:1rem;flex-wrap:wrap;" class="fade-up">
+      <a href="/contact/" class="btn btn-primary">Book a School Visit</a>
+      <a href="/admissions/how-to-apply/" class="btn btn-outline">Apply Now</a>
+    </div>
+
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -160,10 +150,10 @@
       <div class="footer-col">
         <h4>Our Schools</h4>
         <ul>
+          <li><a href="/preschool/">Preschool (Acorns)</a></li>
+          <li><a href="/preschool/what-we-offer/">What We Offer</a></li>
           <li><a href="/primary-school/">Primary School (Gr 1–7)</a></li>
           <li><a href="/primary-school/curriculum/">Curriculum</a></li>
-          <li><a href="/preschool/">Preschool — Acorns</a></li>
-          <li><a href="/preschool/what-we-offer/">What We Offer</a></li>
           <li><a href="/about/charlotte-mason/">Our Philosophy</a></li>
         </ul>
       </div>
@@ -172,6 +162,7 @@
         <ul>
           <li><a href="/admissions/how-to-apply/">How to Apply</a></li>
           <li><a href="/admissions/fees/">Fees 2026</a></li>
+          <li><a href="/thursday-enrichment/">Thursday Enrichment</a></li>
           <li><a href="/news/">News</a></li>
           <li><a href="/events/">Events</a></li>
           <li><a href="/school-life/testimonials/">Testimonials</a></li>
@@ -196,7 +187,122 @@
     </div>
   </div>
 </footer>
+
 <script src="/js/global.js"></script>
+<script>
+(function() {
+  const CALENDAR_ID = 'cd1cdd816526c9e1f61e3b1804d5950bf0a4678f5f5f4f9b63cdff812549338f@group.calendar.google.com';
+  const API_KEY     = 'AIzaSyAyJjAEvvu-53ELI3lir4oINofrpZPG1cQ';
+  const MONTHS      = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const MONTH_FULL  = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  function formatTime(dateStr) {
+    // dateStr is ISO 8601
+    var d = new Date(dateStr);
+    var h = d.getHours(), m = d.getMinutes();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    return h + (m ? ':' + String(m).padStart(2,'0') : '') + ' ' + ampm;
+  }
+
+  function isAllDay(event) {
+    return event.start && event.start.date && !event.start.dateTime;
+  }
+
+  function getStart(event) {
+    return new Date(event.start.dateTime || event.start.date);
+  }
+
+  function getEnd(event) {
+    return new Date(event.end.dateTime || event.end.date);
+  }
+
+  function formatDateRange(event) {
+    var start = getStart(event);
+    var end   = getEnd(event);
+    if (isAllDay(event)) {
+      // All-day: end date is exclusive, so subtract 1 day
+      end.setDate(end.getDate() - 1);
+      if (start.toDateString() === end.toDateString()) {
+        return MONTH_FULL[start.getMonth()] + ' ' + start.getDate() + ', ' + start.getFullYear();
+      }
+      return MONTH_FULL[start.getMonth()] + ' ' + start.getDate() + ' \u2013 ' + MONTH_FULL[end.getMonth()] + ' ' + end.getDate() + ', ' + end.getFullYear();
+    }
+    var timeStr = formatTime(event.start.dateTime) + ' \u2013 ' + formatTime(event.end.dateTime);
+    return MONTH_FULL[start.getMonth()] + ' ' + start.getDate() + ', ' + start.getFullYear() + ' \u00b7 ' + timeStr;
+  }
+
+  function renderEvent(event) {
+    var start    = getStart(event);
+    var day      = start.getDate();
+    var month    = MONTHS[start.getMonth()];
+    var title    = event.summary || 'Ambleside Event';
+    var desc     = event.description ? event.description.replace(/<[^>]+>/g,'').substring(0,120) : '';
+    var location = event.location || '27 Chelsea Drive, Durban North';
+    var dateStr  = formatDateRange(event);
+    var link     = event.htmlLink || '#';
+
+    return '<a href="' + link + '" target="_blank" rel="noopener" class="event-card fade-up" style="text-decoration:none;">' +
+      '<div class="event-date-block">' +
+        '<div class="event-date-day">' + day + '</div>' +
+        '<div class="event-date-month">' + month + '</div>' +
+      '</div>' +
+      '<div class="event-body">' +
+        '<div class="event-cat">Ambleside Event</div>' +
+        '<div class="event-title">' + title + '</div>' +
+        '<div class="event-meta">' + dateStr + (location ? ' \u00b7 ' + location : '') + '</div>' +
+        (desc ? '<div style="font-size:.8rem;color:var(--muted);margin-top:.4rem;">' + desc + (desc.length >= 120 ? '&hellip;' : '') + '</div>' : '') +
+      '</div>' +
+    '</a>';
+  }
+
+  function loadEvents() {
+    var now      = new Date().toISOString();
+    var maxTime  = new Date();
+    maxTime.setMonth(maxTime.getMonth() + 6);
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/' +
+      encodeURIComponent(CALENDAR_ID) +
+      '/events?key=' + API_KEY +
+      '&timeMin=' + encodeURIComponent(now) +
+      '&timeMax=' + encodeURIComponent(maxTime.toISOString()) +
+      '&singleEvents=true&orderBy=startTime&maxResults=20';
+
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        document.getElementById('events-loading').style.display = 'none';
+
+        if (!data.items || data.items.length === 0) {
+          document.getElementById('events-empty').style.display = 'block';
+          return;
+        }
+
+        var list = document.getElementById('events-list');
+        list.style.display = 'flex';
+        list.innerHTML = data.items.map(renderEvent).join('');
+
+        // Trigger fade animations
+        setTimeout(function() {
+          list.querySelectorAll('.fade-up').forEach(function(el) {
+            el.classList.add('visible');
+          });
+        }, 100);
+      })
+      .catch(function() {
+        document.getElementById('events-loading').style.display = 'none';
+        document.getElementById('events-error').style.display = 'block';
+      });
+  }
+
+  loadEvents();
+})();
+</script>
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+.event-card { background: white; }
+.event-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.07); }
+</style>
 
 </body>
 </html>
