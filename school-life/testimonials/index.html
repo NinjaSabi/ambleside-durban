@@ -189,13 +189,19 @@
 
   async function listDir(path) {
     const key = 'ams_' + path;
-    const c = sessionStorage.getItem(key);
-    if (c) return JSON.parse(c);
+    const TTL = 90000; // 90 seconds — fresh enough for staff publishing
+    try {
+      const cached = sessionStorage.getItem(key);
+      if (cached) {
+        const { data, ts } = JSON.parse(cached);
+        if (Date.now() - ts < TTL) return data;
+      }
+    } catch {}
     try {
       const r = await fetch(`${API}/${path}`);
       if (!r.ok) return [];
       const d = await r.json();
-      sessionStorage.setItem(key, JSON.stringify(d));
+      sessionStorage.setItem(key, JSON.stringify({ data: d, ts: Date.now() }));
       return Array.isArray(d) ? d : [];
     } catch { return []; }
   }
