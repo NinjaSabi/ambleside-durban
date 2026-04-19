@@ -201,7 +201,8 @@
 
   async function fetchRaw(path) {
     try {
-      const r = await fetch(`${RAW}/${path}`);
+      const encoded = path.split('/').map(s => encodeURIComponent(s)).join('/');
+      const r = await fetch(`${RAW}/${encoded}`);
       return r.ok ? r.text() : null;
     } catch { return null; }
   }

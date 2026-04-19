@@ -261,7 +261,7 @@
     }
 
     const posts = await Promise.all(mdFiles.map(async (f, i) => {
-      const text = await fetchRaw(f.path);
+      const text = f.download_url ? await fetch(f.download_url).then(r=>r.ok?r.text():null) : null;
       const { meta } = parseFM(text);
       const slug = f.name.replace('.md', '');
       return { slug, ...meta, _index: i };
