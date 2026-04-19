@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News & Updates — Ambleside Durban North</title>
-  <meta name="description" content="Latest news and announcements from Ambleside School of Durban — keeping our community informed and connected.">
-  <link rel="canonical" href="https://amblesidedurban.com/news/">
+  <title>News — Ambleside School of Durban</title>
+  <meta name="description" content="News and updates from Ambleside School of Durban, Durban North.">
+  <link rel="canonical" href="https://amblesidedurban.com/news/article/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://amblesidedurban.com/news/">
-  <meta property="og:title" content="News & Updates — Ambleside Durban North">
-  <meta property="og:description" content="Latest news and announcements from Ambleside School of Durban — keeping our community informed and connected.">
+  <meta property="og:url" content="https://amblesidedurban.com/news/article/">
+  <meta property="og:title" content="News — Ambleside School of Durban">
+  <meta property="og:description" content="News and updates from Ambleside School of Durban, Durban North.">
   <meta property="og:image" content="https://amblesidedurban.com/images/og-home.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -17,9 +17,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/global.css">
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"News","item":"https://amblesidedurban.com/news/"}]}
-  </script>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -89,47 +86,41 @@
   <a href="/contact/">Contact</a>
   <a href="/admissions/how-to-apply/" class="mobile-cta">Apply Now</a>
 </div>
-<div class="page-header">
-  <div class="breadcrumb container"><a href="/">Home</a> <span>›</span> <span>News</span></div>
+<div id="article-header" class="page-header">
+  <div class="breadcrumb container"><a href="/">Home</a> <span>›</span> <a href="/news/">News</a> <span>›</span> <span id="breadcrumb-title">Article</span></div>
   <div class="container">
-    <div class="label label-white">School News</div>
-    <h1>News &amp;<br><em>Updates</em></h1>
-    <p>Stories, announcements, and happenings from life at Ambleside.</p>
+    <div class="label label-white" id="article-category">News</div>
+    <h1 id="article-title" style="color:white;">Loading...</h1>
+    <p id="article-meta" style="color:rgba(255,255,255,.6);font-size:.88rem;"></p>
   </div>
 </div>
 
 <section class="section section-bg-warm-white">
-  <div class="container">
-    <div style="max-width:960px;">
-      <style>
-        @media(min-width:640px){.news-grid{grid-template-columns:1fr 1fr!important}}
-        @media(min-width:960px){.news-grid{grid-template-columns:1fr 1fr 1fr!important}}
-        .skel{background:linear-gradient(90deg,var(--cream) 25%,var(--border) 50%,var(--cream) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;}
-        @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-      </style>
-
-      <!-- Loading skeletons -->
-      <div id="news-loading" class="news-grid" style="display:grid;grid-template-columns:1fr;gap:1.5rem;">
-        <div class="skel" style="height:280px;"></div>
-        <div class="skel" style="height:280px;"></div>
-        <div class="skel" style="height:280px;"></div>
-      </div>
-
-      <!-- Dynamic content -->
-      <div id="news-grid" class="news-grid" style="display:none;grid-template-columns:1fr;gap:1.5rem;"></div>
-
-      <!-- Empty state -->
-      <div id="news-empty" style="display:none;padding:3rem 2rem;background:var(--cream);border:1px solid var(--border);text-align:center;">
-        <p style="font-family:var(--font-serif);font-size:1.1rem;color:var(--navy);margin-bottom:.6rem;">No news posts yet.</p>
-        <p style="font-size:.88rem;color:var(--muted);">Check back soon, or follow us on <a href="https://instagram.com/amblesidedurban" target="_blank" rel="noopener" style="color:var(--navy);">Instagram</a> for updates.</p>
-      </div>
-
-      <p style="font-size:.82rem;color:var(--muted);margin-top:2rem;">
-        Follow us on <a href="https://instagram.com/amblesidedurban" target="_blank" rel="noopener" style="color:var(--navy);">Instagram</a> and <a href="https://facebook.com/amblesideschoolofdurban" target="_blank" rel="noopener" style="color:var(--navy);">Facebook</a> for regular updates.
-      </p>
+  <div class="container" style="max-width:740px;">
+    <div id="article-image" style="margin-bottom:2.5rem;display:none;">
+      <img id="article-img" src="" alt="" style="width:100%;height:auto;" loading="eager">
+    </div>
+    <div id="article-body" style="line-height:1.9;color:var(--text);font-size:1rem;">
+      <div style="background:linear-gradient(90deg,var(--cream) 25%,var(--border) 50%,var(--cream) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;height:400px;"></div>
+    </div>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+      <a href="/news/" class="btn btn-outline">&larr; Back to News</a>
     </div>
   </div>
 </section>
+
+<style>
+  @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+  #article-body h2{font-family:var(--font-serif);font-size:1.5rem;color:var(--navy);margin:2rem 0 .8rem;}
+  #article-body h3{font-family:var(--font-serif);font-size:1.2rem;color:var(--navy);margin:1.5rem 0 .6rem;}
+  #article-body p{margin-bottom:1.2rem;color:var(--muted);}
+  #article-body img{max-width:100%;height:auto;margin:1.5rem 0;}
+  #article-body ul,#article-body ol{margin:1rem 0 1rem 1.5rem;color:var(--muted);}
+  #article-body li{margin-bottom:.4rem;}
+  #article-body strong{color:var(--text);font-weight:600;}
+  #article-body a{color:var(--navy);text-decoration:underline;}
+  #article-body blockquote{border-left:3px solid var(--gold);padding-left:1.5rem;margin:1.5rem 0;font-style:italic;color:var(--muted);}
+</style>
 
 <footer class="footer">
   <div class="container">
@@ -187,6 +178,7 @@
   </div>
 </footer>
 <script src="/js/global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
 <script>
 
   const REPO = 'NinjaSabi/ambleside-durban';
@@ -244,48 +236,36 @@
   }
 
   (async function() {
-    const grid = document.getElementById('news-grid');
-    const loading = document.getElementById('news-loading');
-    const empty = document.getElementById('news-empty');
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('slug');
+    if (!slug) { window.location.href = '/news/'; return; }
 
-    const files = await listDir('_content/news');
-    const mdFiles = files
-      .filter(f => f.name.endsWith('.md'))
-      .sort((a, b) => b.name.localeCompare(a.name))
-      .slice(0, 12);
-
-    if (!mdFiles.length) {
-      loading.style.display = 'none';
-      empty.style.display = 'block';
+    const text = await fetchRaw(`_content/news/${slug}.md`);
+    if (!text) {
+      document.getElementById('article-title').textContent = 'Article not found';
+      document.getElementById('article-body').innerHTML = '<p>This article could not be loaded.</p>';
       return;
     }
 
-    const posts = await Promise.all(mdFiles.map(async (f, i) => {
-      const text = await fetchRaw(f.path);
-      const { meta } = parseFM(text);
-      const slug = f.name.replace('.md', '');
-      return { slug, ...meta, _index: i };
-    }));
+    const { meta, body } = parseFM(text);
 
-    const delays = ['', ' d1', ' d2'];
-    grid.innerHTML = posts.map((p, i) => {
-      const imgHtml = p.image
-        ? `<img src="${p.image}" alt="${p.title || ''}" style="width:100%;height:100%;object-fit:cover;" loading="lazy">`
-        : '';
-      return `
-        <a href="/news/article/?slug=${p.slug}" class="news-card fade-up${delays[i % 3]}">
-          <div class="news-card-image img-placeholder-16-9">${imgHtml}</div>
-          <div class="news-card-body">
-            <div class="news-card-meta">${fmtDate(p.date)}${p.category ? ' · ' + p.category : ''}</div>
-            <div class="news-card-title">${p.title || 'Untitled'}</div>
-            <div class="news-card-summary">${p.summary || ''}</div>
-          </div>
-        </a>`;
-    }).join('');
+    document.title = (meta.title || 'News') + ' — Ambleside School of Durban';
+    document.getElementById('article-title').textContent = meta.title || 'Untitled';
+    document.getElementById('breadcrumb-title').textContent = meta.title || 'Article';
+    document.getElementById('article-category').textContent = meta.category || 'News';
 
-    loading.style.display = 'none';
-    grid.style.display = 'grid';
-    fadeIn(grid);
+    const metaParts = [];
+    if (meta.date) metaParts.push(fmtDate(meta.date));
+    if (meta.author) metaParts.push('By ' + meta.author);
+    document.getElementById('article-meta').textContent = metaParts.join(' · ');
+
+    if (meta.image) {
+      document.getElementById('article-img').src = meta.image;
+      document.getElementById('article-img').alt = meta.title || '';
+      document.getElementById('article-image').style.display = 'block';
+    }
+
+    document.getElementById('article-body').innerHTML = marked.parse(body || '');
   })();
 </script>
 </body>
