@@ -1,5 +1,5 @@
 ---
-title: What Is Charlotte Mason Education — And Why Does It Matter?
+title: What Is Charlotte Mason Education - And Why Does It Matter?
 date: 2026-04-19T16:30:00.000+02:00
 author: Ambleside Staff
 summary: Charlotte Mason believed children are born persons — not empty vessels
