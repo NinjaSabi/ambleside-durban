@@ -25,6 +25,16 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/css/global.css">
 
+  <!-- Netlify Identity — redirect invite/recovery tokens to /admin/ -->
+  <script>
+    (function() {
+      var h = window.location.hash;
+      if (h && (h.indexOf('recovery_token=') > -1 || h.indexOf('invite_token=') > -1)) {
+        window.location.replace('/admin/' + h);
+      }
+    })();
+  </script>
+
   <!-- Schema.org: EducationalOrganization -->
   <script type="application/ld+json">
   {
