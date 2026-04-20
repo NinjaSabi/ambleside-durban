@@ -607,6 +607,19 @@ strong { font-weight: 600; color: var(--text); }
   .scroll-dots { display: none; }
 }
 
+/* Values grid mobile fix — single column scroll, no gap border */
+@media (max-width: 639px) {
+  .vals-grid.cards-scroll {
+    background: transparent;
+    border: none;
+    gap: 1rem;
+  }
+  .vals-grid.cards-scroll > div {
+    border: 1px solid var(--border);
+    min-width: min(300px, 85vw);
+  }
+}
+
 /* Contact h1 — single line on mobile */
 .contact-h1 { white-space: nowrap; }
 @media (max-width: 480px) {
