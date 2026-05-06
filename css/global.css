@@ -47,8 +47,8 @@ body {
 }
 
 @keyframes pageFadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 body { animation: pageFadeIn 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
 .nav { animation: none; }
@@ -181,7 +181,7 @@ strong { font-weight: 600; color: var(--text); }
 
 /* CHANGE: real logo image styles */
 .nav-logo { text-decoration: none; display: flex; align-items: center; flex-direction: column; gap: 2px; }
-.nav-logo-img { height: 42px; width: auto; display: block; }
+.nav-logo-img { height: 42px; width: auto; display: block; mix-blend-mode: multiply; }
 .nav-est {
   font-family: var(--font-sans);
   font-size: 0.52rem; font-weight: 600;
