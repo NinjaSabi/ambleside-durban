@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── SCROLL FADE ANIMATIONS ── */
-  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeEls = document.querySelectorAll('.fade-up, .heading-reveal');
   if (fadeEls.length) {
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
@@ -86,4 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   });
 
+});
+
+document.querySelectorAll('a[href]').forEach(function(link) {
+  var href = link.getAttribute('href');
+  if (href && !href.startsWith('#') && !href.startsWith('mailto') && !href.startsWith('tel') && !link.target) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.style.transition = 'opacity 0.25s ease';
+      document.body.style.opacity = '0';
+      setTimeout(function() { window.location.href = href; }, 260);
+    });
+  }
 });
