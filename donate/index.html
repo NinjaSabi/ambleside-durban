@@ -113,7 +113,7 @@
 
 <section class="section section-bg-warm-white">
   <div class="container">
-    <style>@media(min-width:768px){.donate-grid{grid-template-columns:1fr 1.4fr!important}}</style>
+    <style>@media(min-width:768px){.donate-grid{grid-template-columns:1fr 1.4fr!important}}.donate-cards{grid-template-columns:1fr!important}@media(min-width:600px){.donate-cards{grid-template-columns:1fr 1fr!important}}</style>
     <div class="donate-grid" style="display:grid;grid-template-columns:1fr;gap:3rem;">
 
       <div>
@@ -123,7 +123,7 @@
         <p class="fade-up d2" style="margin-top:1rem;">Every donation goes directly toward supporting families who cannot meet full fees. If you have been shaped by what this school is doing, or if you simply believe in it, we would be honoured by your support.</p>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+      <div class="donate-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start;">
 
         <div class="card fade-up">
           <div class="label label-brown">Local Transfer</div>
@@ -138,10 +138,6 @@
               <strong style="font-size:.88rem;">Nedbank</strong>
             </div>
             <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--border);">
-              <span style="font-size:.8rem;color:var(--muted);">Branch</span>
-              <strong style="font-size:.88rem;">Durban North</strong>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--border);">
               <span style="font-size:.8rem;color:var(--muted);">Branch Code</span>
               <strong style="font-size:.88rem;">13522600</strong>
             </div>
@@ -149,9 +145,13 @@
               <span style="font-size:.8rem;color:var(--muted);">Account Number</span>
               <strong style="font-size:.88rem;">119 750 88 99</strong>
             </div>
-            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--border);">
               <span style="font-size:.8rem;color:var(--muted);">Reference</span>
               <strong style="font-size:.88rem;">Bursary Fund</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.6rem 0;">
+              <span style="font-size:.8rem;color:var(--muted);">SWIFT / BIC</span>
+              <strong style="font-size:.88rem;">NEDSZAJJ</strong>
             </div>
           </div>
           <button onclick="navigator.clipboard.writeText('1197508899');this.textContent='Copied';setTimeout(()=>this.textContent='Copy',2000)" class="btn btn-outline" style="font-size:0.7rem;padding:0.4rem 0.9rem;margin-top:0.8rem;">Copy Account Number</button>
@@ -164,17 +164,6 @@
           <img src="/images/zapper-qr.png" alt="Zapper QR code — Ambleside School of Durban" width="160" height="160" style="display:block;margin:1rem 0;">
           <p style="font-size:.8rem;color:var(--muted);margin-bottom:1rem;">Don't have Zapper? Download it free from the App Store or Google Play.</p>
           <a href="https://www.zapper.com/payWithZapper/?qr=http%3A%2F%2F2.zap.pe%3Ft%3D6%26i%3D54380%3A68320%3A7%5B34%7C0%2C33n%7C%7C1%7CDonation%3A10%5B39%7CZAR%2C38%7CAmbleside%20School%20of%20Durban%20NPC" class="btn btn-outline" target="_blank" rel="noopener">Open Zapper Link</a>
-        </div>
-
-        <div class="card fade-up d2">
-          <div class="label label-brown">International Transfer</div>
-          <h4 style="margin-bottom:.8rem;">Donating from Abroad</h4>
-          <p style="font-size:.9rem;">For international transfers, use the bank details above with the following SWIFT code:</p>
-          <div style="margin:1.2rem 0;padding:1rem 1.2rem;background:var(--cream);border-left:3px solid var(--navy);">
-            <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem;">SWIFT / BIC</div>
-            <div style="font-family:var(--font-serif);font-size:1.5rem;font-weight:700;color:var(--navy);letter-spacing:.06em;">NEDSZAJJ</div>
-          </div>
-          <p style="font-size:.88rem;">Please use reference: <strong>Bursary Fund</strong>. For any queries, contact <a href="mailto:admin@amblesidedurban.com" style="color:var(--navy);">admin@amblesidedurban.com</a></p>
         </div>
 
       </div>
