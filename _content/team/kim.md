@@ -1,6 +1,6 @@
 ---
 title: Kim
-role: Head of School & Redwoods Teacher Gr 5-7
+role: Head of School & Redwoods Teacher · Gr 5-7
 department: Leadership
 image: /images/team-kim.jpg
 order: 1
