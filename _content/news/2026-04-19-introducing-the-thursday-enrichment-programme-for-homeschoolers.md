@@ -13,7 +13,7 @@ One of the questions we hear most often from homeschooling families is this: "Wh
 
 We have been thinking about that question for a while. And our answer is the Thursday Enrichment Programme.
 
-Every Thursday during term, we open our school to homeschooled children in Grades 1 to 7 from 10:00 to 12:30. The morning follows a simple, unhurried rhythm: Nature Study outdoors, Composer Study and Music Appreciation, and a shared break for free play.
+Every Thursday during May, we are opening our school to homeschooled children in Grades 1 to 7 from 10:00 to 12:30. The morning follows a simple, unhurried rhythm: Nature Study outdoors, Composer Study and Music Appreciation, and a shared break for free play.
 
 All materials are provided. Bring a light lunch, a water bottle, and a cap for outside. The cost is R100 for your first child and R80 for each additional child. Booking is essential as spaces are limited.
 
