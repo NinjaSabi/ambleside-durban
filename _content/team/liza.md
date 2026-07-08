@@ -1,6 +1,6 @@
 ---
 title: Liza
-role: Yellowwoods Teacher · Gr 3–4
+role: Director of Instruction & Yellowwoods Teacher · Gr 3–4
 department: Junior School
 image: /images/team-liza.jpg
 order: 3
