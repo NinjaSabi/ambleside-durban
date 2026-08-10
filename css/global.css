@@ -69,6 +69,12 @@ h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 700; }
 h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; }
 h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 600; }
 h4 { font-size: 1.1rem; font-weight: 600; }
+/* Visual-size classes: preserve a heading's original look after its tag
+   level was corrected to keep the document outline sequential (a11y).
+   Class specificity (0,1,0) intentionally overrides the bare tag rules. */
+.hlvl-2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; }
+.hlvl-3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 600; }
+.hlvl-4 { font-size: 1.1rem; font-weight: 600; }
 /* CHANGE: increased body text weight and size for readability */
 p  { line-height: 1.85; color: var(--muted); font-weight: 400; font-size: 1.0625rem; }
 em { font-style: italic; }
