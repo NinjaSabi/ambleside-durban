@@ -239,13 +239,23 @@
     const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
     if (!m) return { meta: {}, body: text };
     const meta = {};
+    let key = null;
     m[1].split(/\r?\n/).forEach(line => {
+      // The CMS wraps long values across indented continuation lines. Anything
+      // indented belongs to the key above it, colons in the text included.
+      if (key && /^\s+\S/.test(line)) { meta[key] += ' ' + line.trim(); return; }
       const i = line.indexOf(':');
       if (i > -1) {
         const k = line.slice(0, i).trim();
-        const v = line.slice(i + 1).trim().replace(/^["']|["']$/g, '');
-        if (k) meta[k] = v;
-      }
+        if (k) {
+          key = k;
+          const v = line.slice(i + 1).trim();
+          meta[k] = /^[|>][-+]?$/.test(v) ? '' : v;
+        }
+      } else { key = null; }
+    });
+    Object.keys(meta).forEach(k => {
+      meta[k] = meta[k].trim().replace(/^["']|["']$/g, '');
     });
     return { meta, body: m[2].trim() };
   }
@@ -302,6 +312,16 @@
           </div>
         </a>`;
     }).join('');
+
+    // A just-published image 404s until Netlify finishes deploying, and some
+    // browsers cached those 404s long-term under the old immutable header. Fall
+    // back to the same file on GitHub, which is live the moment the CMS commits.
+    grid.querySelectorAll('img[src^="/images/"]').forEach(img => {
+      img.addEventListener('error', function onErr() {
+        img.removeEventListener('error', onErr);
+        img.src = RAW + encodeURI(img.getAttribute('src'));
+      });
+    });
 
     loading.style.display = 'none';
     grid.style.display = 'grid';

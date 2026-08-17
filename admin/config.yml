@@ -21,7 +21,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string", default: "Ambleside Staff" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Use a landscape (wide) picture, about 1200 x 675 pixels and under 500 KB. This is shown small on the news list, so tall posters and flyers get cropped and their text becomes unreadable. If you have a poster, put it in the Body below instead, where it shows full size." }
       - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
       - { label: "Summary (shown on news listing)", name: "summary", widget: "text", hint: "2-3 sentences. Shown on the news index page." }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -41,7 +41,7 @@ collections:
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Role / Title", name: "role", widget: "string" }
       - { label: "Department", name: "department", widget: "select", options: ["Leadership", "Junior School", "Preschool — Acorns", "Administration", "Support Staff"] }
-      - { label: "Photo", name: "image", widget: "image", required: false }
+      - { label: "Photo", name: "image", widget: "image", required: false, hint: "A head-and-shoulders photo, roughly square, under 500 KB." }
       - { label: "Short Bio", name: "body", widget: "markdown", hint: "2-4 sentences." }
       - { label: "Sort Order", name: "order", widget: "number", default: 99 }
 

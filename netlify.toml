@@ -28,7 +28,11 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Deliberately NOT immutable. Netlify applies these headers to 404 responses
+# too, and CMS images 404 for the minute it takes a deploy to land. An immutable
+# 404 is cached by the publisher's browser for a year and never revalidated, so
+# the person who uploaded the image is the one person who cannot see it.
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"
