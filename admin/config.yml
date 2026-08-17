@@ -21,7 +21,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string", default: "Ambleside Staff" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Use a landscape (wide) picture, about 1200 x 675 pixels and under 500 KB. This is shown small on the news list, so tall posters and flyers get cropped and their text becomes unreadable. If you have a poster, put it in the Body below instead, where it shows full size." }
+      - { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Any shape works — the news list fits the whole picture in, so nothing gets cropped. A landscape (wide) image of about 1200 x 675 pixels fills the space best. Please keep it under 500 KB so the page loads quickly on a phone." }
       - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
       - { label: "Summary (shown on news listing)", name: "summary", widget: "text", hint: "2-3 sentences. Shown on the news index page." }
       - { label: "Body", name: "body", widget: "markdown" }
