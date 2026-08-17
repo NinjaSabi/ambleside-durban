@@ -1,0 +1,48 @@
+# This repository is PUBLIC. Everything committed here is visible to anyone,
+# and stays visible in the history even after it is deleted. Keep internal
+# documents and anything with a credential in it out of the repo entirely.
+#
+# Note: site content lives in _content/, images/, css/, js/ and admin/ — nothing
+# below may match those, or the published site breaks.
+
+# --- Agent + editor working files ---
+.claude/
+CLAUDE.md
+.vscode/
+.idea/
+
+# --- Internal Gainly documents (not site content) ---
+# Put any future strategy, planning or client-internal document in _internal/
+# and it is ignored automatically.
+_internal/
+MASTER_STRATEGY.md
+REDESIGN_PLAN.md
+ISSUE_*.md
+TALLY_*.md
+Ambleside-Website-Guide.pdf
+
+# --- Credentials: never commit any of these ---
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+*.p12
+credentials*.json
+service-account*.json
+secrets*.yml
+
+# --- Build + dependency output ---
+node_modules/
+.netlify/
+*.log
+
+# --- Scratch, backup and OS junk ---
+/*.py
+*.bak
+*.orig
+*~
+index (*).html
+.DS_Store
+Thumbs.db
+desktop.ini
