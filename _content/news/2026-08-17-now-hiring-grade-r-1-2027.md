@@ -1,5 +1,5 @@
 ---
-title: "Now Hiring: Grade R&1 (2027)"
+title: "We're Hiring: Grade R&1 (2027)"
 date: 2026-08-17T18:52:00.000+02:00
 author: Kim Annall, Head of School
 image: /images/uploads/gr-r-1-advert-picture-news-image-for-website-.png
