@@ -353,11 +353,16 @@ strong { font-weight: 600; color: var(--text); }
 
 /* News card */
 .news-card { text-decoration: none; display: block; }
+/* Staff upload posters as often as photographs, in whatever shape Canva gave
+   them. Fit the whole image inside the slot instead of cropping it to fill, so
+   nothing is ever chopped mid-sentence. Phones get a square slot because a
+   portrait poster is unreadable in a short 16:9 strip at one column wide. */
 .news-card-image {
-  width: 100%; aspect-ratio: 16/9; overflow: hidden;
+  width: 100%; aspect-ratio: 1/1; overflow: hidden;
   background: var(--cream);
 }
-.news-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease; }
+@media (min-width: 640px) { .news-card-image { aspect-ratio: 16/9; } }
+.news-card-image img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s ease; }
 .news-card:hover .news-card-image img { transform: scale(1.04); }
 .news-card-body { padding: 1.5rem; background: white; border-top: 3px solid var(--navy); }
 .news-card-meta {
