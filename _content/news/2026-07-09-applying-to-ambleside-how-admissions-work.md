@@ -19,7 +19,7 @@ Here is how it actually works.
 
 ## Start with a conversation, not a form
 
-The best first step isn't paperwork. It's coming to see us. You're welcome to [book a visit](/contact/), or simply pop in to one of our Thursday open mornings. Come and see the school while it's breathing: children at work, lessons in progress, the ordinary rhythm of a normal day.
+The best first step isn't paperwork. It's coming to see us. You're welcome to [book a visit](/contact/) at a time that suits you. Come and see the school while it's breathing: children at work, lessons in progress, the ordinary rhythm of a normal day.
 
 ## Come and see the classroom in motion
 
