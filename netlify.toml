@@ -3,6 +3,47 @@
   to = "/admin/index.html"
   status = 200
 
+# Legacy URLs still ranked by Google but returning 404 (Search Console, Oct 2026)
+[[redirects]]
+  from = "/employment"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/employment/*"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/curriculum"
+  to = "/primary-school/curriculum/"
+  status = 301
+
+[[redirects]]
+  from = "/curriculum/*"
+  to = "/primary-school/curriculum/"
+  status = 301
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/about-us/*"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/ambleside-schools"
+  to = "/about/charlotte-mason/"
+  status = 301
+
+[[redirects]]
+  from = "/ambleside-schools/*"
+  to = "/about/charlotte-mason/"
+  status = 301
+
 [build]
   publish = "."
 
