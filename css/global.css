@@ -484,7 +484,8 @@ strong { font-weight: 600; color: var(--text); }
   transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
 }
 .footer-social-btn:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-.footer-col h4 {
+/* .hlvl-4: footer headings were retagged h2/h3 in the a11y pass; keep their footer style */
+.footer-col h4, .footer-col .hlvl-4 {
   font-family: var(--font-sans); font-size: 0.58rem; font-weight: 700;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1.2rem;
