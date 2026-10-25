@@ -127,7 +127,7 @@ strong { font-weight: 600; color: var(--text); }
 .label {
   display: inline-flex; align-items: center; gap: 0.8rem;
   font-family: var(--font-sans);
-  font-size: 0.65rem; font-weight: 700;
+  font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold-deep); margin-bottom: 1rem;
 }
@@ -138,17 +138,21 @@ strong { font-weight: 600; color: var(--text); }
 }
 .label-brown { color: var(--brown); }
 .label-brown::before { background: var(--brown); }
-.label-white { color: rgba(255,255,255,0.6); }
-.label-white::before { background: rgba(255,255,255,0.4); }
+.label-white { color: rgba(255,255,255,0.85); }
+.label-white::before { background: rgba(255,255,255,0.6); }
 .label-center { display: flex; justify-content: center; }
 .label-center::before { display: none; }
 /* On dark section backgrounds, revert to the lighter gold (passes AA on navy at 5.34:1) */
 .section-bg-navy .label:not(.label-white):not(.label-brown),
 .section-bg-brown .label:not(.label-white):not(.label-brown),
-.card-navy .label:not(.label-white):not(.label-brown) { color: var(--gold); }
+.card-navy .label:not(.label-white):not(.label-brown),
+.school-panel--junior .label:not(.label-white):not(.label-brown),
+.label.label-on-dark { color: var(--gold); }
 .section-bg-navy .label:not(.label-white):not(.label-brown)::before,
 .section-bg-brown .label:not(.label-white):not(.label-brown)::before,
-.card-navy .label:not(.label-white):not(.label-brown)::before { background: var(--gold); }
+.card-navy .label:not(.label-white):not(.label-brown)::before,
+.school-panel--junior .label:not(.label-white):not(.label-brown)::before,
+.label.label-on-dark::before { background: var(--gold); }
 
 /* ── BUTTONS ── */
 .btn {
@@ -198,9 +202,9 @@ strong { font-weight: 600; color: var(--text); }
 .nav-logo-img { height: 42px; width: auto; display: block; mix-blend-mode: multiply; }
 .nav-est {
   font-family: var(--font-sans);
-  font-size: 0.52rem; font-weight: 600;
+  font-size: 0.7rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--brown); opacity: 0.75; align-self: flex-end;
+  color: var(--brown); opacity: 0.85; align-self: flex-end;
 }
 
 .nav-right { display: flex; align-items: center; gap: 0.5rem; }
@@ -336,7 +340,7 @@ strong { font-weight: 600; color: var(--text); }
 }
 .info-strip-item {
   display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.74rem; font-weight: 400; color: rgba(255,255,255,0.8);
+  font-size: 0.8rem; font-weight: 400; color: rgba(255,255,255,0.85);
   white-space: nowrap; text-decoration: none;
 }
 .info-strip-item:hover { color: white; }
@@ -366,7 +370,7 @@ strong { font-weight: 600; color: var(--text); }
 .news-card:hover .news-card-image img { transform: scale(1.04); }
 .news-card-body { padding: 1.5rem; background: white; border-top: 3px solid var(--navy); }
 .news-card-meta {
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--brown); margin-bottom: 0.6rem;
 }
 .news-card-title {
@@ -419,7 +423,7 @@ strong { font-weight: 600; color: var(--text); }
 }
 .pullquote cite {
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--gold); font-style: normal;
+  text-transform: uppercase; color: var(--gold-deep); font-style: normal;
 }
 .pullquote-white blockquote { color: rgba(255,255,255,0.85); }
 .pullquote-white cite { color: var(--gold); }
@@ -479,14 +483,14 @@ strong { font-weight: 600; color: var(--text); }
   width: 32px; height: 32px;
   border: 1px solid rgba(255,255,255,0.18);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.6); text-decoration: none;
-  font-size: 0.68rem; font-weight: 700;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  font-size: 0.72rem; font-weight: 700;
   transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
 }
 .footer-social-btn:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 /* .hlvl-4: footer headings were retagged h2/h3 in the a11y pass; keep their footer style */
 .footer-col h4, .footer-col .hlvl-4 {
-  font-family: var(--font-sans); font-size: 0.58rem; font-weight: 700;
+  font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 1.2rem;
 }
@@ -539,7 +543,7 @@ strong { font-weight: 600; color: var(--text); }
   pointer-events: none;
 }
 .hero-eyebrow {
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.22em;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--gold);
   margin-bottom: 1.5rem; display: inline-block;
 }
@@ -566,8 +570,8 @@ strong { font-weight: 600; color: var(--text); }
 .hero-pill:active { transform: translateY(0); }
 .hero-pill-icon { display: none; }
 .hero-pill-sub {
-  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 0.2rem;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.2rem;
 }
 .hero-pill-name {
   font-family: var(--font-serif); font-size: 0.92rem;
