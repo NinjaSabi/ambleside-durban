@@ -1,6 +1,64 @@
 /* Ambleside — global.js */
 
+/* ── CONTACT BAR (phones) + contact rows in the mobile menu ──
+   One place for the school's phone, WhatsApp and visit booking, so every page
+   gets them without editing 25 hand-copied navs. The WhatsApp message differs
+   from the Meta ad's ("I saw your ad on Facebook") so the school can tell a
+   website chat from an ad chat. */
+var CONTACT = {
+  tel: 'tel:+27713902182',
+  telLabel: '071 390 2182',
+  whatsapp: 'https://wa.me/27713902182?text=' +
+    encodeURIComponent('Hi, I found Ambleside on your website and would like to know more.'),
+  visit: 'https://cal.com/ambleside/visit'
+};
+var CONTACT_ICONS = {
+  call: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  wa: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+  visit: '<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'
+};
+
+function contactLink(kind, cls) {
+  var items = {
+    call:  { href: CONTACT.tel,      text: 'Call',         label: 'Call the school on ' + CONTACT.telLabel, ext: false },
+    wa:    { href: CONTACT.whatsapp, text: 'WhatsApp',     label: 'WhatsApp the school',                    ext: true },
+    visit: { href: CONTACT.visit,    text: 'Book a visit', label: 'Book a school visit',                    ext: true }
+  };
+  var it = items[kind];
+  var a = document.createElement('a');
+  a.href = it.href;
+  a.className = cls + ' ' + cls + '--' + kind;
+  a.setAttribute('aria-label', it.label);
+  if (it.ext) { a.target = '_blank'; a.rel = 'noopener'; }
+  a.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    CONTACT_ICONS[kind] + '</svg><span>' + it.text + '</span>';
+  return a;
+}
+
+function injectContactBar() {
+  if (window.location.pathname.indexOf('/admin') === 0) return;
+
+  var bar = document.createElement('nav');
+  bar.className = 'contact-bar';
+  bar.setAttribute('aria-label', 'Contact the school');
+  ['call', 'wa', 'visit'].forEach(function(k) { bar.appendChild(contactLink(k, 'contact-bar__link')); });
+  document.body.appendChild(bar);
+  document.body.classList.add('has-contact-bar');
+
+  var menu = document.querySelector('.nav-mobile');
+  if (menu) {
+    var rows = document.createElement('div');
+    rows.className = 'mobile-contact';
+    ['call', 'wa', 'visit'].forEach(function(k) { rows.appendChild(contactLink(k, 'mobile-contact__link')); });
+    menu.insertBefore(rows, menu.firstChild);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* Runs first so the menu's focus trap and close-on-click include the new links */
+  injectContactBar();
 
   /* ── NAV SCROLL SHADOW ── */
   const nav = document.querySelector('.nav');

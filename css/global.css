@@ -660,6 +660,50 @@ strong { font-weight: 600; color: var(--text); }
   .nav-cta { display: none !important; }
 }
 
+/* ── CONTACT BAR (phones; injected by global.js) ── */
+.contact-bar { display: none; }
+@media (max-width: 899px) {
+  .contact-bar {
+    display: grid; grid-template-columns: 0.8fr 1fr 1.35fr;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 498;
+    background: var(--navy);
+    border-top: 1px solid rgba(200,169,110,0.45);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -4px 18px rgba(0,38,71,0.18);
+  }
+  body.has-contact-bar { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+}
+.contact-bar__link {
+  display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+  min-height: 56px; padding: 0 0.4rem;
+  font-family: var(--font-sans); font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap;
+  color: white; text-decoration: none;
+  transition: background var(--transition);
+}
+.contact-bar__link + .contact-bar__link { border-left: 1px solid rgba(255,255,255,0.14); }
+.contact-bar__link:hover { background: var(--navy-dark); }
+.contact-bar__link--visit { background: var(--gold); color: var(--navy); }
+.contact-bar__link--visit:hover { background: var(--gold-light); }
+.contact-bar__link:focus-visible { outline: 2px solid var(--gold-light); outline-offset: -4px; }
+.contact-bar__link--visit:focus-visible { outline-color: var(--navy); }
+.contact-bar__link svg { flex-shrink: 0; }
+
+/* Same three actions at the top of the mobile menu */
+.nav-mobile .mobile-contact {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.nav-mobile .mobile-contact__link {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem;
+  min-height: 64px; padding: 0.6rem 0.3rem;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--navy); background: var(--cream);
+  border: 1px solid var(--border); text-align: center;
+}
+.nav-mobile .mobile-contact__link--visit { background: var(--navy); color: white; border-color: var(--navy); }
+.nav-mobile .mobile-contact__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 /* ── HORIZONTAL SCROLL CARDS (mobile browse sections) ── */
 .cards-scroll {
   display: flex;
