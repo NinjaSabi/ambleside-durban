@@ -59,15 +59,19 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=3600"
 
+# Deliberately NOT immutable (changed 25 Oct 2026). Pages link these files by a fixed
+# name, so a year-long immutable cache meant returning visitors never saw a style or
+# script change. One hour matches the pages. Bump ?v= in all pages only if a change
+# must reach everyone sooner than that.
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600"
 
 # Deliberately NOT immutable. Netlify applies these headers to 404 responses
 # too, and CMS images 404 for the minute it takes a deploy to land. An immutable
