@@ -610,6 +610,10 @@ strong { font-weight: 600; color: var(--text); }
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .fade-up.visible { opacity: 1; transform: none; }
+/* No JavaScript means nothing adds .visible: show the content instead of leaving it invisible */
+@media (scripting: none) {
+  .fade-up, .heading-reveal { opacity: 1; transform: none; }
+}
 .fade-up.d1 { transition-delay: 0.1s; }
 .fade-up.d2 { transition-delay: 0.2s; }
 .fade-up.d3 { transition-delay: 0.3s; }
