@@ -457,6 +457,11 @@ strong { font-weight: 600; color: var(--text); }
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: 1.8fr 1fr 1fr 1fr; }
 }
+/* Small phones: the email address can't wrap, which pushed the footer 26px off a 320px screen */
+@media (max-width: 767px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.5rem; }
+}
+.footer-col a { overflow-wrap: anywhere; }
 
 /* CHANGE: real footer logo image */
 .footer-logo-img {
