@@ -3,9 +3,9 @@ title: "We're Hiring: Grade 6-7 Teacher (2027)"
 date: 2026-08-17T18:58:00.000+02:00
 author: Ambleside Staff
 image: /images/uploads/gr6-7-teacher-news-image-for-website-.png
-summary: Are you a godly, warm, engaging teacher who can shepherd a combined
-  group of Grade R & 1 students, and inspire joy in discovery, helping our
-  children grow in character & master their learning?
+summary: We are looking for a Christian Intermediate Phase teacher, preferably
+  a Maths specialist, to shepherd our combined class of Grade 6 and 7 children
+  from 2027.
 meta_description: Intermediate Phase Teacher Vacancy; Teaching jobs in Durban
   North; Christian junior schools hiring
 ---

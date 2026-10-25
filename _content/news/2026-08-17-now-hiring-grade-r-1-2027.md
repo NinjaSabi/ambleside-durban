@@ -3,11 +3,11 @@ title: "We're Hiring: Grade R&1 (2027)"
 date: 2026-08-17T18:52:00.000+02:00
 author: Kim Annall, Head of School
 image: /images/uploads/gr-r-1-advert-picture-news-image-for-website-.png
-summary: As a growing school, we are looking for a godly, warm and engaging
-  Christian teacher to shepherd our combined class of Grade R and 1 children in
-  their relationships with God, themselves, knowledge, one other, and the world
-  around them ...starting 2027.
+summary: Update: our Grade R & 1 teaching post for 2027 has now been filled.
+  Thank you to everyone who applied.
 ---
+**Update:** this position has now been filled, and we're grateful to everyone who applied. We are still looking for a [Grade 6–7 teacher for 2027](/news/article/?slug=2026-08-17-were-hiring-grade-6-7-teacher-2027). If you're a parent considering Ambleside, you're welcome to [book a school visit](https://cal.com/ambleside/visit) and meet the team.
+
 *Are you a godly, warm, engaging teacher who can shepherd a combined group of  Grade R & 1 students, and inspire joy in discovery, helping our children grow in character & master their learning?*
 
 **Ambleside is a Christian school, so it is vital that our teachers:**
@@ -17,8 +17,6 @@ summary: As a growing school, we are looking for a godly, warm and engaging
 * will teach using the Ambleside Schools International curriculum and methodology 
 
   *(all training and full support is provided)*
-
-  .
 
 **Responsibilities:**
 
