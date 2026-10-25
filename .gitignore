@@ -10,6 +10,10 @@
 CLAUDE.md
 .vscode/
 .idea/
+# Impeccable (design review tool) context and saved critiques
+.impeccable/
+PRODUCT.md
+DESIGN.md
 
 # --- Internal Gainly documents (not site content) ---
 # Put any future strategy, planning or client-internal document in _internal/
